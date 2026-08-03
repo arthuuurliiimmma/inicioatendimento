@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Porto, Severino e Cunha Advogados Associados S./S - Advocacia empresarial em Biguaçu - SC. Especialistas em Direito Empresarial, Cível, Trabalhista e Tributário.">
+    <meta name="keywords" content="advocacia, direito empresarial, direito cível, direito trabalhista, Biguaçu, Santa Catarina, Porto Severino Cunha">
+    <meta name="author" content="Porto, Severino e Cunha Advogados Associados S./S">
+    <meta name="robots" content="index, follow">
+    
+    <title>Porto, Severino e Cunha | Advogados Associados - Biguaçu/SC</title>
+    
+    <!-- ============================================ -->
+    <!-- FAVICON PERSONALIZADO - Letras "PSC" estilizadas -->
+    <!-- ============================================ -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232c3e50'/%3E%3Ccircle cx='50' cy='42' r='16' fill='%23e67e22' opacity='0.3'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='32' font-weight='800' fill='%23e67e22' font-family='Georgia,serif'%3EPSC%3C/text%3E%3Cpath d='M25 78 L40 68 L55 78 L70 68 L85 78' stroke='%23e67e22' stroke-width='2.5' stroke-linecap='round' fill='none' opacity='0.5'/%3E%3C/svg%3E">
+    
+    <!-- Bootstrap 5 + Google Fonts + Font Awesome 6 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #1a2634;
+            --primary: #2c3e50;
+            --primary-medium: #34495e;
+            --secondary-orange: #e67e22;
+            --secondary-orange-dark: #d35400;
+            --secondary-orange-light: #f39c12;
+            --accent-blue: #3498db;
+            --gray-bg: #f4f6f9;
+            --gray-border: #e2e6ea;
+            --text-dark: #1a1a2e;
+            --text-body: #2d3436;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-body);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .display-font {
+            font-family: 'Merriweather', serif;
+        }
+
+        /* Navbar Premium - Estilo Laranja/Corporativo */
+        .premium-nav {
+            background: rgba(26, 38, 52, 0.98);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            border-bottom: 3px solid var(--secondary-orange);
+            padding: 0.6rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            color: #ffffff !important;
+        }
+
+        .brand-sub {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 400;
+            letter-spacing: 0.8px;
+            color: var(--secondary-orange);
+            display: block;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .brand-orange {
+            color: var(--secondary-orange);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: rgba(255,255,255,0.8) !important;
+            margin: 0 0.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            transition: 0.3s;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: rgba(230, 126, 34, 0.15);
+            color: var(--secondary-orange) !important;
+        }
+
+        /* Botões - Estilo Laranja */
+        .btn-premium {
+            background: linear-gradient(135deg, var(--secondary-orange), var(--secondary-orange-dark));
+            border: none;
+            color: #ffffff;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(230, 126, 34, 0.35);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, var(--secondary-orange-dark), var(--secondary-orange));
+            box-shadow: 0 15px 35px rgba(230, 126, 34, 0.45);
+            color: #ffffff;
+        }
+
+        .btn-outline-premium {
+            border: 2px solid var(--secondary-orange);
+            background: transparent;
+            color: var(--secondary-orange);
+            border-radius: 50px;
+            padding: 10px 28px;
+            font-weight: 600;
+            transition: 0.25s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-outline-premium:hover {
+            background: var(--secondary-orange);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section - Estilo mais clean e corporativo */
+        .hero-premium {
+            position: relative;
+            background: linear-gradient(135deg, rgba(26, 38, 52, 0.92) 0%, rgba(44, 62, 80, 0.88) 100%), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format');
+            background-size: cover;
+            background-position: center 35%;
+            padding: 180px 0 150px;
+            margin-top: 0;
+        }
+
+        .hero-premium .hero-title {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 3.6rem;
+            line-height: 1.15;
+            color: #ffffff;
+        }
+
+        .hero-premium .hero-title .orange {
+            color: var(--secondary-orange);
+        }
+
+        .hero-premium .hero-sub {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.15rem;
+            font-weight: 300;
+        }
+
+        .badge-premium {
+            background: rgba(230, 126, 34, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 8px 20px;
+            border-radius: 40px;
+            color: var(--secondary-orange);
+            font-weight: 600;
+            display: inline-block;
+            border: 1px solid rgba(230, 126, 34, 0.2);
+            font-size: 0.8rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .hero-stat {
+            border-right: 1px solid rgba(255,255,255,0.12);
+            padding-right: 1.5rem;
+        }
+        .hero-stat:last-child {
+            border-right: none;
+        }
+
+        /* Cards com borda laranja */
+        .premium-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            transition: all 0.35s cubic-bezier(0.2,0,0,1);
+            border: 1px solid var(--gray-border);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            border-bottom: 4px solid transparent;
+        }
+
+        .premium-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px -15px rgba(0,0,0,0.12);
+            border-bottom-color: var(--secondary-orange);
+        }
+
+        .icon-premium {
+            width: 68px;
+            height: 68px;
+            background: rgba(230, 126, 34, 0.08);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--secondary-orange);
+            transition: 0.3s;
+        }
+
+        .premium-card:hover .icon-premium {
+            background: var(--secondary-orange);
+            color: #ffffff;
+        }
+
+        /* Seções */
+        .section-title {
+            font-family: 'Merriweather', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+        }
+
+        .section-title .orange {
+            color: var(--secondary-orange);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-body);
+            opacity: 0.8;
+        }
+
+        .img-justice {
+            border-radius: 24px;
+            object-fit: cover;
+            width: 100%;
+            height: 420px;
+            box-shadow: 0 25px 40px -15px rgba(0,0,0,0.15);
+        }
+
+        .orange-accent-line {
+            width: 60px;
+            height: 4px;
+            background: var(--secondary-orange);
+            border-radius: 4px;
+            margin: 0.5rem 0 1.2rem 0;
+        }
+
+        .stat-item-orange {
+            border-left: 3px solid var(--secondary-orange);
+            padding-left: 1.2rem;
+        }
+
+        .oab-badge {
+            background: rgba(230, 126, 34, 0.1);
+            border: 1px solid rgba(230, 126, 34, 0.2);
+            border-radius: 50px;
+            padding: 6px 18px;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--secondary-orange);
+        }
+
+        /* Footer */
+        .footer-premium {
+            background: var(--primary-dark);
+            color: rgba(255,255,255,0.8);
+            border-top: 3px solid var(--secondary-orange);
+            padding-top: 3rem;
+        }
+
+        .footer-premium h4, .footer-premium h6 {
+            font-family: 'Merriweather', serif;
+        }
+
+        .footer-premium a {
+            color: rgba(255,255,255,0.6);
+            transition: 0.2s;
+            text-decoration: none;
+        }
+
+        .footer-premium a:hover {
+            color: var(--secondary-orange);
+        }
+
+        .orange-divider {
+            border-color: rgba(230, 126, 34, 0.2);
+        }
+
+        /* Páginas internas */
+        .page-content {
+            background: white;
+            border-radius: 28px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
+            margin-top: 2rem;
+        }
+
+        .page-content h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            border-left: 4px solid var(--secondary-orange);
+            padding-left: 1rem;
+        }
+
+        .page-content h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 1.5rem;
+        }
+
+        .page-content .last-update {
+            background: var(--gray-bg);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+        }
+
+        .btn-back-orange {
+            background: var(--secondary-orange);
+            border: none;
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-back-orange:hover {
+            background: var(--secondary-orange-dark);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Responsivo */
+        @media (max-width: 992px) {
+            .hero-premium .hero-title { font-size: 2.5rem; }
+            .hero-premium { padding: 130px 0 100px; }
+            .section-title { font-size: 2.1rem; }
+        }
+
+        @media (max-width: 576px) {
+            .hero-premium .hero-title { font-size: 1.9rem; }
+            .page-content { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top premium-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                Porto, Severino <span class="brand-orange">&</span> Cunha
+                <span class="brand-sub">Advogados Associados S./S</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPremium" style="color: var(--secondary-orange);">
+                <i class="fas fa-bars fs-4"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarPremium">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#areas">Áreas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#escritorio">Escritório</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="#contato" class="btn btn-premium btn-sm px-4">Consultoria <i class="fas fa-arrow-right ms-1"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero-premium">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-9">
+                    <span class="badge-premium mb-3"><i class="fas fa-gavel me-2"></i>Excelência em Advocacia</span>
+                    <h1 class="hero-title">
+                        Soluções Jurídicas <br><span class="orange">que protegem</span> seu patrimônio
+                    </h1>
+                    <p class="hero-sub lead mt-4">Atendimento corporativo e personalizado, com foco em resultados. A Porto, Severino e Cunha é referência em Biguaçu - SC.</p>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="#contato" class="btn btn-premium px-5 py-3"><i class="fas fa-handshake me-2"></i>Agendar reunião</a>
+                        <a href="#areas" class="btn btn-outline-premium px-4 py-3">Nossas áreas</a>
+                    </div>
+                    <div class="row mt-5 g-4">
+                        <div class="col-auto hero-stat">
+                            <i class="fas fa-check-circle" style="color:var(--secondary-orange);"></i>
+                            <strong class="text-white ms-1">CNPJ:</strong>
+                            <span class="text-white-75" style="font-size:0.9rem;">21.912.976/0001-00</span>
+                        </div>
+                        <div class="col-auto hero-stat">
+                            <i class="fas fa-location-dot" style="color:var(--secondary-orange);"></i>
+                            <span class="text-white-75" style="font-size:0.9rem;">Biguaçu - SC</span>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-phone" style="color:var(--secondary-orange);"></i>
+                            <span class="text-white-75" style="font-size:0.9rem;">(48) 3243-2294</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-5" style="background: var(--gray-bg);">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format" alt="Porto, Severino e Cunha Advogados" class="img-justice" style="height: 400px; object-fit: cover;">
+                </div>
+                <div class="col-lg-7">
+                    <span class="badge bg-dark text-white-75 px-4 py-2 rounded-pill"><i class="fas fa-users me-2"></i>Quem Somos</span>
+                    <h2 class="section-title mt-3">
+                        Porto, Severino <span class="orange">&</span> Cunha
+                        <div class="orange-accent-line"></div>
+                    </h2>
+                    <p class="text-secondary lead" style="font-size:1rem;">A <strong>Porto, Severino e Cunha Advogados Associados S./S</strong> é um escritório consolidado em Biguaçu - SC, com atuação estratégica nas áreas empresarial, cível e trabalhista.</p>
+                    <p class="text-secondary" style="font-size:0.95rem;">Fundado em <strong>2016</strong>, nosso escritório reúne profissionais especializados com visão moderna e compromisso com a justiça. Atendemos pessoas físicas e empresas com soluções jurídicas personalizadas.</p>
+                    <div class="oab-badge mt-2">
+                        <i class="fas fa-id-card"></i> OAB/SC em dia | Atuação desde 2016
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <i class="fas fa-check-circle" style="color:var(--secondary-orange);"></i>
+                            <strong>+9 anos de experiência</strong>
+                        </div>
+                        <div class="col-6">
+                            <i class="fas fa-check-circle" style="color:var(--secondary-orange);"></i>
+                            <strong>Equipe multidisciplinar</strong>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <i class="fas fa-check-circle" style="color:var(--secondary-orange);"></i>
+                            <strong>Atendimento corporativo</strong>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <i class="fas fa-check-circle" style="color:var(--secondary-orange);"></i>
+                            <strong>Resultados consistentes</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Áreas -->
+    <section id="areas" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="badge bg-light text-dark px-4 py-2 rounded-pill border"><i class="fas fa-scale-balanced me-2"></i>Especialidades</span>
+                <h2 class="section-title mt-3">
+                    Nossas <span class="orange">Áreas de Atuação</span>
+                </h2>
+                <p class="section-subtitle w-75 mx-auto">Soluções jurídicas completas e estratégicas para pessoas físicas e jurídicas.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="premium-card text-center">
+                        <div class="icon-premium mx-auto mb-4"><i class="fas fa-building fa-fw"></i></div>
+                        <h5 class="fw-bold">Direito Empresarial</h5>
+                        <p class="small">Assessoria societária, contratos comerciais, recuperação judicial e planejamento.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="premium-card text-center">
+                        <div class="icon-premium mx-auto mb-4"><i class="fas fa-handshake fa-fw"></i></div>
+                        <h5 class="fw-bold">Direito Cível</h5>
+                        <p class="small">Contratos, responsabilidade civil, indenizações e proteção de direitos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="premium-card text-center">
+                        <div class="icon-premium mx-auto mb-4"><i class="fas fa-briefcase fa-fw"></i></div>
+                        <h5 class="fw-bold">Direito Trabalhista</h5>
+                        <p class="small">Reclamações trabalhistas, acordos coletivos e defesa de empresas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="premium-card text-center">
+                        <div class="icon-premium mx-auto mb-4"><i class="fas fa-calculator fa-fw"></i></div>
+                        <h5 class="fw-bold">Direito Tributário</h5>
+                        <p class="small">Planejamento fiscal, defesas administrativas e contencioso tributário.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#contato" class="btn btn-outline-premium px-5">Solicitar análise</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Escritório -->
+    <section id="escritorio" class="py-5" style="background: var(--gray-bg);">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1568992688065-536aad8a2f59?q=80&w=2070&auto=format" alt="Escritório Porto Severino Cunha" class="img-justice">
+                </div>
+                <div class="col-lg-6">
+                    <div class="ps-lg-3">
+                        <span class="badge-premium bg-white text-dark border">Nossa sede</span>
+                        <h2 class="section-title mt-3">
+                            Localização estratégica <br>no <span class="orange">Centro de Biguaçu</span>
+                        </h2>
+                        <p class="lead fs-6 text-secondary">Um espaço moderno e acolhedor, projetado para oferecer o melhor atendimento aos nossos clientes.</p>
+                        <div class="stat-item-orange my-4">
+                            <i class="fas fa-map-pin me-2" style="color: var(--secondary-orange);"></i>
+                            <strong>Rua 7 de Setembro, 281 - Centro</strong><br>
+                            <span class="small">Biguaçu - SC, CEP: 88160-164</span>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <i class="fas fa-phone-alt me-2" style="color: var(--secondary-orange);"></i>
+                                (48) 3243-2294
+                            </div>
+                            <div class="col-6">
+                                <i class="fas fa-envelope me-2" style="color: var(--secondary-orange);"></i>
+                                contato@portoseverinocunha.adv.br
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-2">
+                            <a href="#contato" class="btn btn-premium rounded-pill">
+                                <i class="fas fa-phone me-2"></i>Entre em contato
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <i class="fas fa-trophy fs-1" style="color: var(--secondary-orange);"></i>
+                        <h4 class="fw-bold mt-3">+9 anos</h4>
+                        <p>de experiência e atuação consolidada em Santa Catarina</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <i class="fas fa-users fs-1" style="color: var(--secondary-orange);"></i>
+                        <h4 class="fw-bold mt-3">Equipe Associada</h4>
+                        <p>Profissionais com visão corporativa e estratégica</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <i class="fas fa-scale-balanced fs-1" style="color: var(--secondary-orange);"></i>
+                        <h4 class="fw-bold mt-3">Alta eficácia</h4>
+                        <p>Resultados consistentes em causas empresariais e cíveis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-5" style="background: var(--gray-bg);">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="badge bg-dark text-white-75 px-4 py-2 rounded-pill"><i class="fas fa-comment-dots me-2"></i>Fale com especialista</span>
+                <h2 class="section-title mt-3">
+                    Vamos proteger <span class="orange">seus interesses</span>
+                </h2>
+                <p class="section-subtitle w-75 mx-auto">Entre em contato e agende uma reunião estratégica sem compromisso.</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                        <h4 class="fw-bold mb-4"><i class="fas fa-building me-2" style="color: var(--secondary-orange);"></i>Dados institucionais</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><strong>Razão Social:</strong> Porto, Severino e Cunha Advogados Associados S./S</li>
+                            <li class="mb-3"><strong>CNPJ:</strong> 21.912.976/0001-00</li>
+                            <li class="mb-3"><strong>Endereço:</strong> Rua 7 de Setembro, 281 - Centro<br>Biguaçu - SC, CEP 88160-164</li>
+                            <li class="mb-3"><strong>Telefone:</strong> (48) 3243-2294</li>
+                            <li class="mb-3"><strong>E-mail:</strong> contato@portoseverinocunha.adv.br</li>
+                            <li class="mb-3"><strong>Horário:</strong> Segunda a Sexta, 9h às 18h</li>
+                        </ul>
+                        <a href="tel:4832432294" class="btn btn-premium w-100">
+                            <i class="fas fa-phone me-2"></i> Ligar agora
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="bg-white rounded-4 shadow-sm overflow-hidden">
+                        <div class="p-4 p-xl-5">
+                            <h4 class="fw-semibold mb-3">Solicite uma análise</h4>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control form-control-lg rounded-3" placeholder="Nome completo" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" class="form-control form-control-lg rounded-3" placeholder="(48) 3243-2294">
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="email" class="form-control form-control-lg rounded-3" placeholder="Email profissional" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea rows="4" class="form-control rounded-3" placeholder="Descreva resumidamente sua demanda jurídica..."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-premium w-100 py-3 fw-bold">Enviar consulta <i class="fas fa-paper-plane ms-2"></i></button>
+                                    </div>
+                                    <p class="small text-muted mt-2">Seus dados estão seguros. Responderemos em até 24h úteis.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 pt-4">
+                <div class="rounded-4 overflow-hidden shadow-sm border bg-white">
+                    <iframe src="https://maps.google.com/maps?q=Rua+7+de+Setembro,+281,+Bigua%C3%A7u,+SC&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="text-center mt-2">
+                    <small><i class="fas fa-location-dot text-primary me-1"></i> Rua 7 de Setembro, 281 - Centro, Biguaçu - SC</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-premium pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-5">
+                    <h4 class="fw-bold">Porto, Severino <span style="color:var(--secondary-orange);">&</span> Cunha</h4>
+                    <p class="small" style="color:rgba(255,255,255,0.6);">Advogados Associados S./S - Compromisso com a justiça e a excelência em Biguaçu - SC.</p>
+                    <div class="oab-badge bg-transparent border-white-50 text-white-50 mb-3">
+                        <i class="fas fa-id-card"></i> OAB/SC | Especialistas desde 2016
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold text-white">Navegação</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#home">Início</a></li>
+                        <li class="mb-2"><a href="#sobre">Sobre</a></li>
+                        <li class="mb-2"><a href="#areas">Áreas de atuação</a></li>
+                        <li class="mb-2"><a href="#escritorio">O escritório</a></li>
+                        <li class="mb-2"><a href="#contato">Fale conosco</a></li>
+                        <li class="mb-2"><a href="termos.html">Termos de Uso</a></li>
+                        <li class="mb-2"><a href="privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold text-white">Contato direto</h6>
+                    <p class="small" style="color:rgba(255,255,255,0.6);">
+                        <i class="fas fa-phone-alt me-2"></i>(48) 3243-2294
+                    </p>
+                    <p class="small" style="color:rgba(255,255,255,0.6);">
+                        <i class="fas fa-envelope me-2"></i>contato@portoseverinocunha.adv.br
+                    </p>
+                    <p class="small" style="color:rgba(255,255,255,0.6);">
+                        <i class="fas fa-map-marker-alt me-2"></i>Rua 7 de Setembro, 281 - Centro<br>Biguaçu - SC, CEP 88160-164
+                    </p>
+                    <p class="small" style="color:rgba(255,255,255,0.6);">
+                        <i class="fas fa-clock me-2"></i>Seg-Sex: 9h às 18h
+                    </p>
+                </div>
+            </div>
+            <hr class="mt-4 orange-divider">
+            <div class="text-center small" style="color:rgba(255,255,255,0.4);">
+                © 2025 Porto, Severino e Cunha Advogados Associados S./S | CNPJ: 21.912.976/0001-00 | Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll(".nav-link");
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (pageYOffset >= sectionTop) current = section.getAttribute("id");
+            });
+            navLi.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${current}`) link.classList.add("active");
+            });
+        });
+    </script>
+</body>
+</html>
